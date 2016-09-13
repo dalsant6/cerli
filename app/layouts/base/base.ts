@@ -1,10 +1,9 @@
 import {Component, ViewEncapsulation, ViewContainerRef} from '@angular/core';
 import { ROUTER_DIRECTIVES, Routes } from '@angular/router';
-
 import {LoginComponent} from '../../pages/login/components/login';
 import {SignupComponent} from '../../pages/signup/components/signup';
 import {DashboardComponent} from '../dashboard/components/dashboard';
-
+declare var firebase = require('firebase');
 @Component({
 	moduleId: module.id,
     selector: 'sd-app',
@@ -16,7 +15,7 @@ import {DashboardComponent} from '../dashboard/components/dashboard';
 @Routes([
     { path: '/', component: LoginComponent },
     { path: '/signup', component: SignupComponent },
-    { path: 'dashboard', component: DashboardComponent }
+    { path: '/dashboard', component: DashboardComponent },
 ])
 
 export class AppComponent {
@@ -24,5 +23,12 @@ export class AppComponent {
 	public constructor(viewContainerRef:ViewContainerRef) {
 	    // You need this small hack in order to catch application root view container ref
 	    this.viewContainerRef = viewContainerRef;
+    let config = {
+      apiKey: "AIzaSyCs9vxbpZxH7I1j1_krnNMlPzwCkYqBhao",
+      authDomain: "protobids.firebaseapp.com",
+      databaseURL: "https://protobids.firebaseio.com",
+      storageBucket: "",
+    };
+    firebase.initializeApp(config);
 	}
 }

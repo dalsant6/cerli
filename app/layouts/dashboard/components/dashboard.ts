@@ -12,6 +12,11 @@ import {NG2Component} from '../../../pages/component/components/component';
 
 import {TopNavComponent} from '../../../shared/topnav/topnav';
 import {SidebarComponent} from '../../../shared/sidebar/sidebar';
+import {ClientHomeComponent} from "../../../pages/client-home/components/client-home";
+import {UserService} from "../../../services/user.service";
+import {JobsComponent} from "../../../pages/jobs/jobs.component";
+import {JobDetailComponent} from "../../../pages/job-detail/job-detail.component";
+import {ContractorOverviewComponent} from "../../../pages/contracter-overview/contractor-overview.component";
 
 @Component({
   moduleId: module.id,
@@ -22,6 +27,7 @@ import {SidebarComponent} from '../../../shared/sidebar/sidebar';
 })
 
 @Routes([
+
     { path: '/home', component: HomeComponent },
     { path: '/chart', component: ChartComponent },
     { path: '/table', component: TableComponent },
@@ -29,7 +35,17 @@ import {SidebarComponent} from '../../../shared/sidebar/sidebar';
 	{ path: '/element', component: BSElementComponent},
 	{ path: '/grid', component: GridComponent },
 	{ path: '/component', component: NG2Component },
-	{ path: '/blank-page', component: BlankPageComponent }
+	{ path: '/blank-page', component: BlankPageComponent },
+  { path: 'client-home', component: ClientHomeComponent},
+  { path: 'jobs', component: JobsComponent},
+  { path: '/job-detail/:id', component: JobDetailComponent},
+  { path: '/contractor/:id', component: ContractorOverviewComponent}
+
 ])
 
-export class DashboardComponent { }
+
+export class DashboardComponent {
+  constructor(private _userService: UserService){
+
+  }
+}

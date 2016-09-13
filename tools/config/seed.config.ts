@@ -122,7 +122,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'SB Admin BS 4 Angular2';
+  APP_TITLE = 'ProtoBids';
 
   /**
    * The base folder of the applications source files.
