@@ -1,0 +1,197 @@
+@import '../../assets/bootstrap/scss/_variables.scss';
+.home{
+  .my-header{
+    width: 100%;
+    height: 35rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    position: relative;
+    .my-title{
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+    }
+    .header-content{
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+    h2{
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+  }
+  .page-content{
+    width: 100%;
+    padding: 1rem 1rem;
+
+  }
+  .cube-container{
+    perspective: 1000px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  .cube{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    transform-style: preserve-3d;
+    -webkit-animation-name: rotateY;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: rotateY;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  .cube:hover{
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  .center-cube{
+    .row{
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  .cover{
+    transform-style: preserve-3d;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    -webkit-transform: rotateX(-15deg);
+    transform: rotateX(-15deg);
+  }
+  .cover:hover{
+    -webkit-animation-name: rotateX;
+    animation-name: rotateX;
+  }
+  .cover:active{
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  .front, .back, .left, .right, .top, .bottom{
+    height:100%;
+    width: 100%;
+    border: thin solid #f5f5f5;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    .image-container{
+      height: 100%;
+      width: 100%;
+      position: relative;
+      img{
+        width: auto;
+        max-width: 80px;
+        height: auto;
+        max-height: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  i{
+    color: #3C6DCD;
+  }
+  .front{
+    transform: translateZ(50px);
+  }
+  .back{
+    transform: translateZ(-50px) rotateY(270deg);
+    transform-origin: center left;
+  }
+  .left{
+    transform: rotateY(-270deg) translateX(50px);
+    transform-origin: top right;
+  }
+  .right{
+    transform: translateZ(-50px) rotateY(180deg);
+  }
+  .top{
+    transform: rotateX(-90deg) rotateZ(90deg) translateZ(-50px);
+  }
+  .bottom{
+    transform: rotateX(-90deg) rotateZ(90deg) translateZ(50px);
+  }
+  .description{
+    width: 99%;
+    padding: 2rem 2rem;
+    text-align: center;
+    display: block;
+    margin: auto;
+    background-color: #f5f5f5;
+    h3{
+      font-size: 1.25rem;
+    }
+    h2{
+      font-size: 2.25rem;
+      font-weight: bold;
+    }
+  }
+  @-webkit-keyframes rotateY {
+    from{
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to{
+      -webkit-transform: rotateY(359deg);
+      transform: rotateY(359deg);
+    }
+  }
+  @keyframes rotateY {
+    from{
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to{
+      -webkit-transform: rotateY(359deg);
+      transform: rotateY(359deg);
+    }
+  }
+  @-webkit-keyframes rotateX {
+    from{
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+    to{
+      -webkit-transform: rotateX(359deg);
+      transform: rotateX(359deg);
+    }
+  }
+  @keyframes rotateX {
+    from{
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+    to{
+      -webkit-transform: rotateX(359deg);
+      transform: rotateX(359deg);
+    }
+  }
+
+}

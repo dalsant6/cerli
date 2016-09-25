@@ -6,6 +6,7 @@
 .navbar {
   position: relative;
   padding: $navbar-padding-vertical $navbar-padding-horizontal;
+  border-bottom:thin solid #f5f5f5;
   @include clearfix;
 
   @include media-breakpoint-up(sm) {
@@ -29,6 +30,10 @@
 }
 
 // Fix the top/bottom navbars when screen real estate supports it
+.center{
+  float: none;
+  display: inline-block;
+}
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -144,6 +149,10 @@
 .navbar-nav {
   .nav-item {
     float: left;
+    a{
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
   }
 
   .nav-link {

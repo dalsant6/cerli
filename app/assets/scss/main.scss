@@ -22,7 +22,7 @@ $topnav-background-color: #222;
 .topnav{
   border-radius: 0;
   background-color: $topnav-background-color;
-  padding : 6px;
+  padding : 0;
     z-index:2;
     .text-center{
         text-align: center;
@@ -163,10 +163,10 @@ a:hover{
 }
 .main-container{
   margin: 50px 0 0 0;
-    padding: 20px;
+    padding: 0;
     -ms-overflow-x: hidden;
         overflow-x: hidden;
-    position: relative;
+    position: inherit;
     z-index: 1;
 }
 .chat-panel{

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "protobids"
+    "portfolio": "portfolio-f16f5",
+    "default": "portfolio-f16f5"
   }
 }
