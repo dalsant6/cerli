@@ -1,5 +1,50 @@
 .project-protodash{
   .content{
     padding: 1rem 1rem;
+    img{
+      max-height: 40rem;
+    }
+    .left{
+      float: left;
+    }
+    .right{
+      float: right;
+    }
+    .title{
+      text-align: center;
+      margin-top: 15rem;
+      h1{
+        font-weight: bold;
+        color: #2e2e2e;
+      }
+    }
+    .description{
+      margin-top: 1rem;
+      text-align: center;
+      p{
+        font-size: 1.25rem;
+        color: #2e2e2e;
+      }
+    }
+    hr{
+      width: 80%;
+      padding: 2rem 0;
+    }
+    .container{
+      width: 80%;
+      text-align: center;
+      .vid{
+        margin-top: 5rem;
+      }
+    }
+    .vid-container{
+      height: 20rem;
+      position: relative;
+      iframe{
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 }
