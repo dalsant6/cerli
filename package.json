@@ -1,10 +1,7 @@
 {
-  "name": "angular2-app",
+  "name": "portfolio",
   "version": "0.0.0",
-  "description": "Modular seed project for Angular 2 apps with fast, statically typed build",
-  "repository": {
-    "url": "https://github.com/nitinkumarmishra/angular2-app"
-  },
+  "description": "Portfolio project work for Christian DalSanto",
   "scripts": {
     "build.dev": "gulp build.dev --color",
     "build.dev.watch": "gulp build.dev.watch --color",
