@@ -1,8 +1,11 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { enableProdMode, provide } from '@angular/core';
 import { bootstrap } from '@angular/platform-browser-dynamic';
-import { ROUTER_PROVIDERS } from '@angular/router';
+import {ROUTER_PROVIDERS} from '@angular/router';
 import { AppComponent } from './base';
+import {BaseService} from "../../services/base.service";
+import {DataService} from "../../services/data.service";
+import {HTTP_PROVIDERS, Http} from "@angular/http";
 
 if ('<%= ENV %>' === 'prod') { enableProdMode(); }
 
@@ -11,7 +14,7 @@ if ('<%= ENV %>' === 'prod') { enableProdMode(); }
  * @see https://angular.io/docs/ts/latest/api/platform-browser-dynamic/index/bootstrap-function.html
  */
 bootstrap(AppComponent, [
-  ROUTER_PROVIDERS,
+  ROUTER_PROVIDERS, DataService, BaseService, HTTP_PROVIDERS, ROUTER_PROVIDERS,
   provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' })
 ]);
 

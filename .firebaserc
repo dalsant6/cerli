@@ -1,6 +1,7 @@
 {
   "projects": {
     "portfolio": "portfolio-f16f5",
-    "default": "portfolio-f16f5"
+    "default": "portfolio-f16f5",
+    "cerli": "cerli-4a694"
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "cerli",
   "version": "0.0.0",
-  "description": "Portfolio project work for Christian DalSanto",
+  "description": "Cerli URL Shortener",
   "scripts": {
     "build.dev": "gulp build.dev --color",
     "build.dev.watch": "gulp build.dev.watch --color",
@@ -29,8 +29,8 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update"
   },
-  "author": "Nitin Kumar Mishra",
-  "license": "MIT",
+  "author": "Christian DalSanto",
+  "license": "",
   "devDependencies": {
     "async": "1.4.2",
     "autoprefixer": "6.3.6",

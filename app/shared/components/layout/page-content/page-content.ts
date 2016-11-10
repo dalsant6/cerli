@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
   moduleId: module.id,
   selector: 'page-content',
   templateUrl: 'page-content.html',
-  styleUrls: ['page-content.css'],
+  styles: ['.page-content{margin-top: 1rem;}'],
   directives: []
 })
 

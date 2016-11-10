@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {BaseService} from "./base.service";
-import {Observable} from 'rxjs';
 import {Http} from "@angular/http";
+import {Observable} from "rxjs/Rx";
 
 @Injectable()
 export class DataService extends BaseService{
@@ -12,6 +12,7 @@ export class DataService extends BaseService{
   submitUrl(url: string): Observable<any>{
     return Observable.create((observable: any) => {
       this.post("/submitUrl/", url).subscribe((data) => {
+        console.log("data = "+JSON.stringify(data));
         observable.next(data);
       });
     });
